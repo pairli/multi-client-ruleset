@@ -1,0 +1,50 @@
+name: Build rule sets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "source/**"
+      - "scripts/**"
+      - ".github/workflows/build.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ruleset-build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Generate text rule sets
+        run: python3 scripts/generate.py
+
+      - name: Compile sing-box binary rule sets
+        run: |
+          for source in generated/sing-box/*.json; do
+            target="${source%.json}.srs"
+            docker run --rm \
+              -v "$PWD:/work" \
+              -w /work \
+              ghcr.io/sagernet/sing-box:latest \
+              rule-set compile --output "$target" "$source"
+          done
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add generated
+          if git diff --cached --quiet; then
+            echo "Generated files are already up to date."
+          else
+            git commit -m "build: update generated rule sets"
+            git push
+          fi

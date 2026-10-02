@@ -1,0 +1,31 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "domain_suffix": [
+        "feepower.com",
+        "ddurl.to",
+        "dingding.xin",
+        "dingstore.cn",
+        "dingtalk.cn",
+        "dingtalk.com",
+        "dingtalk.net",
+        "dingtalkapps.com",
+        "dingtalkcloud.com",
+        "laiwang.com",
+        "lwurl.to",
+        "ztna-dingtalk.com",
+        "qq.com",
+        "gtimg.com",
+        "qpic.cn",
+        "rtx.com.cn",
+        "servicewechat.com",
+        "wechat.com",
+        "weixin.com",
+        "wx.qq.com",
+        "wxcloudrun.com",
+        "wxgateway.com"
+      ]
+    }
+  ]
+}

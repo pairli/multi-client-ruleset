@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "rules": [
+    { "type": "domain-suffix", "value": "feepower.com" },
+    { "type": "domain-suffix", "value": "ddurl.to" },
+    { "type": "domain-suffix", "value": "dingding.xin" },
+    { "type": "domain-suffix", "value": "dingstore.cn" },
+    { "type": "domain-suffix", "value": "dingtalk.cn" },
+    { "type": "domain-suffix", "value": "dingtalk.com" },
+    { "type": "domain-suffix", "value": "dingtalk.net" },
+    { "type": "domain-suffix", "value": "dingtalkapps.com" },
+    { "type": "domain-suffix", "value": "dingtalkcloud.com" },
+    { "type": "domain-suffix", "value": "laiwang.com" },
+    { "type": "domain-suffix", "value": "lwurl.to" },
+    { "type": "domain-suffix", "value": "ztna-dingtalk.com" },
+    { "type": "domain-suffix", "value": "qq.com" },
+    { "type": "domain-suffix", "value": "gtimg.com" },
+    { "type": "domain-suffix", "value": "qpic.cn" },
+    { "type": "domain-suffix", "value": "rtx.com.cn" },
+    { "type": "domain-suffix", "value": "servicewechat.com" },
+    { "type": "domain-suffix", "value": "wechat.com" },
+    { "type": "domain-suffix", "value": "weixin.com" },
+    { "type": "domain-suffix", "value": "wx.qq.com" },
+    { "type": "domain-suffix", "value": "wxcloudrun.com" },
+    { "type": "domain-suffix", "value": "wxgateway.com" }
+  ]
+}
